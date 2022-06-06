@@ -1,96 +1,32 @@
 #include <stdio.h>
-
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
-
 /**
+* main - prints all possible combinations of two two-digit numbers.
 *
-* main - Entry point
-*
-* Return: Always 0 (Success)
+* Return: 0
 */
-
 int main(void)
-
 {
-
-		int p = 48, q = 48, y = 48, x = 49;
-
-
-
-			while (p < 58)
-
-					{
-
-								while (q < 58)
-
-											{
-
-															while (y < 58)
-
-																			{
-
-																								while (x < 58)
-
-																													{
-
-																																			putchar(p);
-
-																																								putchar(q);
-
-																																													putchar(' ');
-
-																																																		putchar(y);
-
-																																																							putchar(x);
-
-																																																												if (!(p == 57 &&
-
-																																																																					q == 56 &&
-
-																																																																											y == 57 &&
-
-																																																																																	x == 57))
-
-																																																																		{
-
-																																																																									putchar(',');
-
-																																																																															putchar(' ');
-
-																																																																																				}
-
-																																																																	x++;
-
-																																																																					}
-
-																												y++;
-
-																																x = 48;
-
-																																			}
-
-																		q++;
-
-																					q = p;
-
-																								x = q + 1;
-
-																										}
-
-										p++;
-
-												q = 48;
-
-														y = p;
-
-																x = q+ 1;
-
-																	}
-
-				putchar('\n');
-
-					return (0);
-
+int i;
+int j;
+for (i = 0; i < 100; i++)
+{
+for (j = 0; j < 100; j++)
+{
+if (j > i)
+{
+putchar(i / 10 + '0');
+putchar(i % 10 + '0');
+putchar(' ');
+putchar(j / 10 + '0');
+putchar(j % 10 + '0');
+if (i * 100 + j != 9899)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+putchar('\n');
+return (0);
 }

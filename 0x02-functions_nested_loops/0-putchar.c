@@ -4,7 +4,7 @@
 * Description: prints _putchar using putchar prototype
 * Return: Always 0 (Success)
 */
-int main(void)
+int _putchar(int c);
 {
 char str[] = "_putchar";
 int ch;

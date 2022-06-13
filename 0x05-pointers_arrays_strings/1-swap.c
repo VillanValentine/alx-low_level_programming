@@ -4,8 +4,9 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
+
 void swap_int(int *a, int *b)
 
 {
@@ -13,5 +14,5 @@ void swap_int(int *a, int *b)
 	temp = *a;
 	*a = *b;
 	*b = temp;
-	return (0);
+	
 }
